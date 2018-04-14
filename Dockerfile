@@ -2,10 +2,7 @@ FROM homeassistant/home-assistant:latest
 LABEL maintainer="Andrew Sanjanwala <sanfam@gmail.com>"
 
 # Install Chrome for Selenium
-RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
-RUN dpkg -i /chrome.deb || apt-get install -yf
-RUN rm /chrome.deb
-
-# Install chromedriver for Selenium
-RUN curl https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip -o /usr/local/bin/chromedriver
-RUN chmod +x /usr/local/bin/chromedriver
+RUN CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`
+RUN wget -N http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip -P /tmp
+RUN unzip /tmp/chromedriver_linux64.zip -d /tmp
+RUN sudo install -m 0755 -o root /tmp/chromedriver /usr/local/bin/chromedriver
