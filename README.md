@@ -2,9 +2,7 @@
 
 This is a fork of https://github.com/home-assistant/home-assistant
 
-See official documentation from there.
-
-Inspired by https://github.com/taskinen/home-assistant
+See official documentation from there.  Inspired by https://github.com/taskinen/home-assistant
 
 ## New features
 
