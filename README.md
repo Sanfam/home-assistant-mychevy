@@ -6,7 +6,7 @@ See official documentation from there.  Inspired by https://github.com/taskinen/
 
 ## New features
 
-Added [Selenium](https://www.seleniumhq.org/) with the Chrome driver into the Home Assistant docker instance
+Added [Selenium](https://www.seleniumhq.org/) with the Chrome driver and the myChevy python module into the Home Assistant docker instance in order to get charge stats on my Gen 1 Chevy Volt
 
 ## Why?
 
